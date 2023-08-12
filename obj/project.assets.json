@@ -107,6 +107,29 @@
         "frameworkReferences": [
           "Microsoft.AspNetCore.App"
         ]
+      },
+      "Datos/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "Modelos": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Datos.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Datos.dll": {}
+        }
+      },
+      "Modelos/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "compile": {
+          "bin/placeholder/Modelos.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Modelos.dll": {}
+        }
       }
     }
   },
@@ -451,11 +474,23 @@
         "swashbuckle.aspnetcore.swaggerui.6.4.0.nupkg.sha512",
         "swashbuckle.aspnetcore.swaggerui.nuspec"
       ]
+    },
+    "Datos/1.0.0": {
+      "type": "project",
+      "path": "../Datos/Datos.csproj",
+      "msbuildProject": "../Datos/Datos.csproj"
+    },
+    "Modelos/1.0.0": {
+      "type": "project",
+      "path": "../Modelos/Modelos.csproj",
+      "msbuildProject": "../Modelos/Modelos.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net7.0": [
+      "Datos >= 1.0.0",
       "Microsoft.AspNetCore.OpenApi >= 7.0.5",
+      "Modelos >= 1.0.0",
       "Swashbuckle.AspNetCore >= 6.4.0"
     ]
   },
@@ -492,7 +527,14 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Proyectos\\C#\\ASP.NET Core Web API\\MagicVilla\\Datos\\Datos.csproj": {
+              "projectPath": "C:\\Proyectos\\C#\\ASP.NET Core Web API\\MagicVilla\\Datos\\Datos.csproj"
+            },
+            "C:\\Proyectos\\C#\\ASP.NET Core Web API\\MagicVilla\\Modelos\\Modelos.csproj": {
+              "projectPath": "C:\\Proyectos\\C#\\ASP.NET Core Web API\\MagicVilla\\Modelos\\Modelos.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

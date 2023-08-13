@@ -1294,19 +1294,6 @@
           }
         }
       },
-      "Datos/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v7.0",
-        "dependencies": {
-          "Modelos": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/Datos.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Datos.dll": {}
-        }
-      },
       "Modelos/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
@@ -4039,11 +4026,6 @@
         "version.txt"
       ]
     },
-    "Datos/1.0.0": {
-      "type": "project",
-      "path": "../Datos/Datos.csproj",
-      "msbuildProject": "../Datos/Datos.csproj"
-    },
     "Modelos/1.0.0": {
       "type": "project",
       "path": "../Modelos/Modelos.csproj",
@@ -4052,7 +4034,6 @@
   },
   "projectFileDependencyGroups": {
     "net7.0": [
-      "Datos >= 1.0.0",
       "Microsoft.AspNetCore.JsonPatch >= 7.0.10",
       "Microsoft.AspNetCore.Mvc.NewtonsoftJson >= 7.0.10",
       "Microsoft.AspNetCore.OpenApi >= 7.0.5",
@@ -4096,9 +4077,6 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "C:\\Proyectos\\C#\\ASP.NET Core Web API\\MagicVilla\\Datos\\Datos.csproj": {
-              "projectPath": "C:\\Proyectos\\C#\\ASP.NET Core Web API\\MagicVilla\\Datos\\Datos.csproj"
-            },
             "C:\\Proyectos\\C#\\ASP.NET Core Web API\\MagicVilla\\Modelos\\Modelos.csproj": {
               "projectPath": "C:\\Proyectos\\C#\\ASP.NET Core Web API\\MagicVilla\\Modelos\\Modelos.csproj"
             }

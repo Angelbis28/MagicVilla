@@ -8,7 +8,6 @@
     ".NETCoreApp,Version=v7.0": {
       "MagicVilla_API/1.0.0": {
         "dependencies": {
-          "Datos": "1.0.0",
           "Microsoft.AspNetCore.JsonPatch": "7.0.10",
           "Microsoft.AspNetCore.Mvc.NewtonsoftJson": "7.0.10",
           "Microsoft.AspNetCore.OpenApi": "7.0.5",
@@ -715,14 +714,6 @@
           }
         }
       },
-      "Datos/1.0.0": {
-        "dependencies": {
-          "Modelos": "1.0.0"
-        },
-        "runtime": {
-          "Datos.dll": {}
-        }
-      },
       "Modelos/1.0.0": {
         "dependencies": {
           "Microsoft.EntityFrameworkCore.SqlServer": "7.0.10"
@@ -1277,11 +1268,6 @@
       "sha512": "sha512-c1ho9WU9ZxMZawML+ssPKZfdnrg/OjR3pe0m9v8230z3acqphwvPJqzAkH54xRYm5ntZHGG1EPP3sux9H3qSPg==",
       "path": "system.windows.extensions/5.0.0",
       "hashPath": "system.windows.extensions.5.0.0.nupkg.sha512"
-    },
-    "Datos/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
     },
     "Modelos/1.0.0": {
       "type": "project",

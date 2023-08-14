@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Routing;
+using Microsoft.EntityFrameworkCore;
 using Modelos;
 using Modelos.Dto;
 using Modelos.Modelos;
@@ -105,27 +106,25 @@ namespace MagicVilla_API.Controllers
 
         [HttpPut("{id:int}")]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
 
         public IActionResult UpdateVillaById(int id, [FromBody] VillaDto villaDto)
         {
             if (villaDto == null || id != villaDto.Id) return BadRequest();
 
-            var villa = _dbContext.Villas.FirstOrDefault(x => x.Id == id);
-            if (villa == null) return NotFound();
+            Villa modelo = new()
+            {
+                Id = villaDto.Id,
+                Nombre = villaDto.Nombre,
+                Detalle = villaDto.Detalle,
+                ImagenUrl = villaDto.ImagenUrl,
+                Ocupantes = villaDto.Ocupantes,
+                MetrosCuadrados = villaDto.MetrosCuadraros,
+                Tarifa = villaDto.Tarifa,
+                Amenidad = villaDto.Amenidad
+            };
 
-            villa.Nombre = villaDto.Nombre;
-            villa.Detalle = villaDto.Detalle;
-            villa.ImagenUrl = villaDto.ImagenUrl;
-            villa.MetrosCuadrados = villaDto.MetrosCuadraros;
-            villa.Tarifa = villaDto.Tarifa;
-            villa.Amenidad = villaDto.Amenidad;
-            villa.Ocupantes = villaDto.Ocupantes;
-
-
-            _dbContext.Update(villa);
-
+            _dbContext.Villas.Update(modelo);
             _dbContext.SaveChanges();
 
             return NoContent();
@@ -140,12 +139,13 @@ namespace MagicVilla_API.Controllers
         {
             if (patchDto == null || id == 0) return BadRequest();
 
-            var villa = _dbContext.Villas.FirstOrDefault(x => x.Id == id);
+            var villa = _dbContext.Villas.AsNoTracking().FirstOrDefault(x => x.Id == id);
 
             if (villa == null) return BadRequest();
 
             VillaDto villaDto = new()
             {
+                Id = villa.Id,
                 Nombre = villa.Nombre,
                 Detalle = villa.Detalle,
                 ImagenUrl = villa.ImagenUrl,
@@ -174,8 +174,5 @@ namespace MagicVilla_API.Controllers
 
             return NoContent();
         }
-
-
-
     }
 }

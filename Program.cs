@@ -2,6 +2,7 @@
 
 using Microsoft.EntityFrameworkCore;
 using Modelos;
+using Modelos.Map;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -13,10 +14,14 @@ builder.Services.AddControllers()
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+// Servicio de DbContext
 builder.Services.AddDbContext<ApplicationDBContext>(options =>
 {
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
 });
+
+// Servicio de Mapping
+builder.Services.AddAutoMapper(typeof(MappingConfig));
 
 
 var app = builder.Build();

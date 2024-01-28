@@ -3,6 +3,8 @@
 using Microsoft.EntityFrameworkCore;
 using Modelos;
 using Modelos.Map;
+using Servicios.Repositorio.Interfaz;
+using Servicios.Repositorio.Servicio;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -22,6 +24,10 @@ builder.Services.AddDbContext<ApplicationDBContext>(options =>
 
 // Servicio de Mapping
 builder.Services.AddAutoMapper(typeof(MappingConfig));
+
+builder.Services
+    .AddScoped<IVillaRepositorio, VillaRepositorio>()
+    .AddScoped<INumeroVillaRepositorio, NumeroVillaRepositorio>();
 
 
 var app = builder.Build();

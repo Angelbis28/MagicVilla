@@ -16,6 +16,7 @@
           "Microsoft.EntityFrameworkCore.Design": "7.0.10",
           "Microsoft.EntityFrameworkCore.SqlServer": "7.0.10",
           "Modelos": "1.0.0",
+          "Servicios": "1.0.0",
           "Swashbuckle.AspNetCore": "6.4.0"
         },
         "runtime": {
@@ -747,6 +748,14 @@
         "runtime": {
           "Modelos.dll": {}
         }
+      },
+      "Servicios/1.0.0": {
+        "dependencies": {
+          "Modelos": "1.0.0"
+        },
+        "runtime": {
+          "Servicios.dll": {}
+        }
       }
     }
   },
@@ -1310,6 +1319,11 @@
       "hashPath": "system.windows.extensions.5.0.0.nupkg.sha512"
     },
     "Modelos/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Servicios/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

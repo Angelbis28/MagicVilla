@@ -1336,6 +1336,19 @@
         "runtime": {
           "bin/placeholder/Modelos.dll": {}
         }
+      },
+      "Servicios/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "Modelos": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Servicios.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Servicios.dll": {}
+        }
       }
     }
   },
@@ -4089,6 +4102,11 @@
       "type": "project",
       "path": "../Modelos/Modelos.csproj",
       "msbuildProject": "../Modelos/Modelos.csproj"
+    },
+    "Servicios/1.0.0": {
+      "type": "project",
+      "path": "../Servicios/Servicios.csproj",
+      "msbuildProject": "../Servicios/Servicios.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -4101,6 +4119,7 @@
       "Microsoft.EntityFrameworkCore.Design >= 7.0.10",
       "Microsoft.EntityFrameworkCore.SqlServer >= 7.0.10",
       "Modelos >= 1.0.0",
+      "Servicios >= 1.0.0",
       "Swashbuckle.AspNetCore >= 6.4.0"
     ]
   },
@@ -4140,6 +4159,9 @@
           "projectReferences": {
             "C:\\Proyectos\\C#\\ASP.NET Core Web API\\MagicVilla\\Modelos\\Modelos.csproj": {
               "projectPath": "C:\\Proyectos\\C#\\ASP.NET Core Web API\\MagicVilla\\Modelos\\Modelos.csproj"
+            },
+            "C:\\Proyectos\\C#\\ASP.NET Core Web API\\MagicVilla\\Servicios\\Servicios.csproj": {
+              "projectPath": "C:\\Proyectos\\C#\\ASP.NET Core Web API\\MagicVilla\\Servicios\\Servicios.csproj"
             }
           }
         }
